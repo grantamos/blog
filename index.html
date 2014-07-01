@@ -1,0 +1,44 @@
+---
+layout: default
+title: home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+
+    <div class="post-body">
+      {{ post.excerpt }}
+    </div>
+
+    <p class="post-readmore">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        Read more...
+      </a>
+    </p>
+    
+    <hr>
+
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">&laquo; Older</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">&raquo; Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">&raquo; Newer</a>
+    {% endif %}
+  {% endif %}
+</div>

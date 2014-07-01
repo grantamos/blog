@@ -1,0 +1,21 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            grantamos
+description:      "hopefully I'll have something interesting to add...."
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:           https://github.com/grantamos
+
+baseurl:          /blog
+
+excerpt_separator: <!--more-->

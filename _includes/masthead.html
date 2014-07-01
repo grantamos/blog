@@ -1,0 +1,32 @@
+<div class="masthead sixteen columns">
+	<div class="four columns omega pull-right">
+    <div class="avatar-container">
+      <img class="avatar" src="{{ site.baseurl }}/public/images/hair_icon.png"></img>
+      <div class="connect-with-me">
+        <a class="fa fa-github" href="http://github.com/grantamos"></a>
+        <a class="fa fa-envelope"></a>
+        <a class="fa fa-codepen"></a>
+      </div>
+    </div>
+	</div>
+  <div class="twelve columns alpha pull-left">
+    <div id="branding">
+      <a href="{{ site.baseurl }}/">{{ site.title }}</a> - {{ site.description }}
+    </div>
+    <nav id="nav">
+      <li class="nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="{{ site.baseurl }}/">home</a>
+      </li>
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <li class="nav-item{% if page.url == node.url %} active{% endif %}">
+              <a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</div>
