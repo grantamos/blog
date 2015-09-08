@@ -8,6 +8,7 @@ layout: nil
  <title>{{ site.title }}</title>
  <link href="{{ site.url }}{{ site.baseurl }}/atom.xml" rel="self"/>
  <link href="{{ site.url }}{{ site.baseurl }}"/>
+ <icon>{{ site.url }}{{ site.baseurl }}/public/images/hair_icon.png</icon>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{ site.url }}</id>
  <author>
@@ -21,9 +22,6 @@ layout: nil
    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
-   <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/"
-     url="{{post.thumbnail}}"
-     height="300" width="300" />
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
