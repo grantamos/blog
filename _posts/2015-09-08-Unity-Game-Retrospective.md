@@ -17,6 +17,7 @@ Finally, peformance was abysmal when relying to heavily on costly instantiation 
 Overall, I couldn't help but feel like Unity is a bit myopic.  In my next game development adventures, I'll be taking a look at UE4 with hopes of broadening my game engine experience.
 
 **tl;dr;**
-* Prefabs encourage delicate object compositions that break way too easily.
-* The UI system leaves much to be desired.
-* Prefab instantiation is costly.
+
++ Prefabs encourage delicate object compositions that break way too easily.
++ The UI system leaves much to be desired.
++ Prefab instantiation is costly.
