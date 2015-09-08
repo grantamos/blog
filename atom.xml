@@ -21,7 +21,9 @@ layout: nil
    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
-   <icon src="{{post.thumbnail}}"></icon>
+   <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/"
+     url="{{post.thumbnail}}"
+     height="300" width="300" />
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
