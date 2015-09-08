@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Unity 5 Retrospective
+thumbnail: http://www.linuxnewshere.com.au/images/linux/Unity-5-2.jpg
 ---
 Over the past four months, I put around 25 hours a week in to my first formal Unity game.  During this time, I slowly came to the realization that some of Unity's biggest features aren't all that great.
 
