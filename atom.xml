@@ -21,14 +21,8 @@ layout: nil
    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">
-    <![CDATA[
-      <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
-        <img src="{{post.thumbnail}}" />
-      </a>
-    ]]>
-    {{ post.content | xml_escape }}
-    </content>
+   <icon src="{{post.thumbnail}}"></icon>
+   <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
 
